@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Age</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-margin-top">
+      <ion-col size="12" class="ion-text-center ion-margin">
+        <p class="ion-margin">Choose carefully - you can only change your age a limited number of times.</p>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-margin">
+        <textarea [(ngModel)]="textareaValue" class="textarea-ionic" rows="1" cols="3" maxlength="2"></textarea>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-margin">
+        <p class="mesageColor">{{masegeFromTextarea}}</p>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-margin">
+        <ion-button (click)="onSubmit()" class="ion-padding" size="large">Update</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

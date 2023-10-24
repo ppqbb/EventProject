@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">My Events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col [size]="12" [sizeSm]="6" [sizeLg]="4" [sizeXl]="3" *ngFor="let Event of events" >
+        <ion-card>
+          <ion-card-subtitle>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="4" class="ion-text-start">
+                  <ion-chip>
+                    <ion-icon name="time-outline"></ion-icon>
+                    <label>{{Event.time}}</label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col size="4" class="ion-text-center">
+                  <ion-icon button routerLink="boost-page"  size="large" name="rocket"></ion-icon>
+                </ion-col>
+                <ion-col size="4" class="ion-text-end">
+                  <ion-icon size="large" (click)="getId(Event.img)" name="trash-outline"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-subtitle>
+          <div >
+          <ion-item>
+            <ion-img [src]="Event.img" ></ion-img>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-margin">{{Event.text}}</ion-label>
+             <ion-icon color="primary" button name="map"></ion-icon>
+          </ion-item>
+        </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

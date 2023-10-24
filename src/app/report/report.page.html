@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon (click)="backPage()" size="large" button name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      
+        <ion-chip (click)="IsActive1('Characterized by, harassment, hate speech')" [style]="styleCss1" class="ion-margin">
+          <ion-label>Characterized by, harassment, hate speech</ion-label>
+          <ion-icon name="megaphone"></ion-icon>
+        </ion-chip>
+      
+      
+        <ion-chip (click)="IsActive2('Random shooting')" [style]="styleCss2" class="ion-margin">
+          <ion-label>Random shooting</ion-label>
+          <ion-icon name="trending-down"></ion-icon>
+        </ion-chip>
+      
+    </ion-row>
+    <ion-row>
+      <ion-chip (click)="IsActive3('Disruptive behaviour')" [style]="styleCss3" class="ion-margin">
+        <ion-label>Disruptive behaviour</ion-label>
+        <ion-icon name="thumbs-down"></ion-icon>
+      </ion-chip>
+      
+      
+        <ion-chip (click)="IsActive4('Illegal activities')" [style]="styleCss4" class="ion-margin">
+          <ion-label>Illegal activities</ion-label>
+          <ion-icon name="sad"></ion-icon>
+        </ion-chip>
+      
+    </ion-row>
+    <ion-row>
+      
+        <ion-chip (click)="IsActive5('Inappropriate content')" [style]="styleCss5" class="ion-margin">
+          <ion-label>Inappropriate content</ion-label>
+          <ion-icon name="eye-off"></ion-icon>
+        </ion-chip>
+      
+      
+        <ion-chip (click)="IsActive6('Third party applications')" [style]="styleCss6" class="ion-margin">
+          <ion-label>Third party applications</ion-label>
+          <ion-icon name="push"></ion-icon>
+        </ion-chip>
+      
+    </ion-row>
+    <ion-row>
+        <ion-chip (click)="IsActive7('Another thing')" [style]="styleCss7" class="ion-margin">
+          <ion-label>Another thing</ion-label>
+          <ion-icon name="skull"></ion-icon>
+        </ion-chip>
+      
+      
+        <ion-chip (click)="IsActive8('abnormal cases')" [style]="styleCss8" class="ion-margin">
+          <ion-label>abnormal cases</ion-label>
+          <ion-icon name="warning"></ion-icon>
+        </ion-chip>
+      
+      
+        <ion-chip (click)="IsActive9('Disclosure of personal data')" [style]="styleCss9" class="ion-margin">
+          <ion-label>Disclosure of personal data</ion-label>
+          <ion-icon name="magnet"></ion-icon>
+        </ion-chip>
+      
+    </ion-row>
+    <ion-row class="ion-margin my-margin-top">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button expand="block" (click)="userReport()" (click)="IsActive10()">
+          Reporting
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="">
+      <ion-col size="4"></ion-col>
+      <ion-col size="4" class="ion-text-center">
+        <ion-img class="img-style ion-margin-end ion-margin-start" src="../../assets/img/20827570_Cartoon character filling in form in survey or checklist.jpg"></ion-img>
+      </ion-col>
+      <ion-col size="4"></ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <h2><b>Write your emil to Sent link to chenge your password!</b></h2>
+        <ion-textarea [(ngModel)]="emil"></ion-textarea>
+
+        <h5>We've just sent an email to you at.</h5>
+
+        <h5>Did not receive an email?</h5>
+      
+      
+        <ion-button class="ion-padding-end ion-padding-start" (click)="ResaatPassword()">Send</ion-button>
+      
+        <h5><b>{{authen.label}}</b></h5>
+
+        <a (click)="goToSingeUp()">go to signUp</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

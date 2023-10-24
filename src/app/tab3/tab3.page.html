@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-text-center">
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-chip (click)="deleteNoteAll()">
+          <ion-icon name="trash-outline"></ion-icon>
+          <label>Delete All</label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let note of notifications"  size="12">
+        <ion-item>
+          <ion-label>
+            <h3>{{note.name}}</h3>
+            <p>{{note.text}}</p>
+          </ion-label>
+          <h6 class="ion-margin-end"><ion-icon name="notifications-outline"></ion-icon></h6>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

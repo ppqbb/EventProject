@@ -1,0 +1,28 @@
+<ion-toolbar>
+  <ion-buttons slot="end">
+    <ion-button (click)="sendMessageText()" size="large">Next</ion-button>
+  </ion-buttons>
+  
+  <ion-buttons (click)="goBack()" slot="start">
+    <ion-button size="large">Back</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-textarea [(ngModel)]="eventMessage.TextDB" [clearOnEdit]="true"  [maxlength]="350" [rows]="10" [counter]="true" placeholder="Write Event message here..."></ion-textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-fab vertical="bottom" horizontal="center" class="my-margen">
+    <ion-fab-button>
+      <ion-icon (click)="addPhotoToGallery()" name="camera-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "event-8a8a2": {
+      "hosting": {
+        "app": [
+          "event-8a8a2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "event-8a8a2"
+  }
+}

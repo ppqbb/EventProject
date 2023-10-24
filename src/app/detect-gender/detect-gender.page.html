@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <ion-icon (click)="backPage()" size="large" button name="chevron-back-outline"></ion-icon>
+  <ion-grid class="myClassContent">
+    <ion-row class="ion-margin-top">
+      <ion-col size="11" class="ion-text-center ion-margin">
+        <ion-icon class="ion-margin-start" size="large" name="transgender-outline"></ion-icon>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-margin">
+        <h5>To which gender do you most identify?</h5>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center ion-margin">
+        <ion-row class="ion-text-center">
+          <ion-col sizeLg="3" sizeXs="0"></ion-col>
+          <ion-col sizeLg="2" sizeXs="12" class="ion-text-center">
+            <ion-card (click)="IsActive1()" [style]="styleCss1" class="ion-margin ion-padding ion-padding-buttom" button>
+              <ion-card-header>
+                <ion-icon class="ion-margin-start" size="large" name="man-outline"></ion-icon>
+              </ion-card-header>
+              <ion-card-content>
+                male
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col sizeLg="2" sizeXs="12" class="ion-text-center">
+            <ion-card (click)="IsActive2()" [style]="styleCss2" class="ion-margin ion-padding ion-padding-buttom" button>
+              <ion-card-header >
+                <ion-icon class="ion-margin-start" size="large" name="woman-outline"></ion-icon>
+              </ion-card-header>
+              <ion-card-content>
+                female
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col  sizeLg="2" sizeXs="12" class="ion-text-center">
+            <ion-card (click)="IsActive3()" [style]="styleCss3" class="ion-margin ion-padding ion-padding-buttom" button>
+              <ion-card-header>
+                <ion-icon class="ion-margin-start" size="large" name="infinite-outline"></ion-icon>
+              </ion-card-header>
+              <ion-card-content>
+                undefined
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col sizeLg="3" sizeXs="0"></ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center">
+        <ion-col size="4"></ion-col>
+        <ion-col size="4" class="ion-text-center">
+          <ion-button class="ion-margin-start ion-margin-top" id="present-alert" expand="block" (click)="sendGenderDB()" (click)="IsActiveClear()">
+            Next
+          </ion-button>
+        </ion-col>
+        <ion-col size="4"></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

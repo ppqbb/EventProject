@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon (click)="goToEvent()" name="chevron-back-outline" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-card class="card-whdth">
+    <ion-row>
+      <ion-col [sizeXl]="6" [sizeMd]="6" [sizeXs]="12">
+        <ion-img [src]="event.img"></ion-img>
+      </ion-col>
+      <ion-col [sizeXl]="6" [sizeMd]="6" [sizeXs]="12">
+         <ion-row >
+          <ion-col class="ion-text-end">
+            <ion-chip routerLink="report">
+              <ion-label>Report</ion-label>
+              <ion-icon name="warning"></ion-icon>
+            </ion-chip>
+          </ion-col>
+
+           <ion-col [sizeXs]="12">
+             <label class="my-element ion-margin ion-padding">{{event.text}}</label>
+           </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="my-button">
+        <ion-button (click)="navigateToLocation()">go to Event</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="my-col" size="12" *ngFor="let message of messages">
+        <div class="chat-style">
+          <label>
+            <div class="infoMessage"><span>{{messageTime()}} </span><span> clos<ion-icon class="ion-text-center" size="medium" name="navigate-circle-outline"></ion-icon></span><span> @1</span></div>
+            {{message}}
+          </label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="11">
+          <ion-textarea [(ngModel)]="newMessage" placeholder="Type a message..."></ion-textarea>
+        </ion-col>
+        <ion-col size="1">
+          <ion-icon class="ion-margin-end" size="large" button (click)="sendMessage()" name="send-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

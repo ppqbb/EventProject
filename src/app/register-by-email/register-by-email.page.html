@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="">
+      <ion-col size="4">
+        <ion-icon size="large" button (click)="BackPage()" name="chevron-back-outline"></ion-icon>
+      </ion-col>
+      <ion-col size="4" class="ion-text-center">
+        <ion-img class="img-style ion-margin-end ion-margin-start" src="../../assets/img/20827570_Cartoon character filling in form in survey or checklist.jpg"></ion-img>
+      </ion-col>
+      <ion-col size="4"></ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <h2><b>What's your email?</b></h2>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-textarea [(ngModel)]="authen.email" placeholder="Your email address..."></ion-textarea>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <h2><b>Creeate your password?</b></h2>
+      </ion-col>
+      <ion-col sizeXs="12" sizeLg="6" class="ion-text-center">
+        <ion-input [(ngModel)]="authen.password" type="password" placeholder="Your password..." value="password"></ion-input>
+      </ion-col>
+      
+      <ion-col sizeXs="12" sizeLg="6" class="ion-text-center">
+        <ion-input [(ngModel)]="authen.confirmPassword" type="password" placeholder="confirm password..." value="password"></ion-input>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="register()" ><ion-icon name="sparkles-outline" class="ion-margin-end"></ion-icon>Sign Up<ion-icon name="sparkles-outline" class="ion-margin-start"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <label>{{authen.label}}</label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

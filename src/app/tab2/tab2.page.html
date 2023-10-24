@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="logo-container">
+      <img class="log" src="../../assets/img/logo-Event.png">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row >
+      <ion-col [size]="12" [sizeSm]="6" [sizeLg]="4" [sizeXl]="3" *ngFor="let Event of events" >
+        <ion-card>
+          <ion-card-subtitle>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="4" class="ion-text-start">
+                  <ion-chip>
+                    <ion-icon name="time-outline"></ion-icon>
+                    <label>{{Event.time}}</label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col size="4" class="ion-text-center">
+
+                  <ion-icon button (click)="CarentBoost(-1)" (click)="getIdEvent(Event.img)" size="large" name="rocket"></ion-icon>
+                  
+                </ion-col>
+                <ion-col size="4" class="ion-text-end">
+                  
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-subtitle>
+          <div (click)="getideven(Event.img)">
+          <ion-item>
+            <ion-img [src]="Event.img" ></ion-img>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-margin">{{Event.text}}</ion-label>
+             <ion-icon color="primary" button name="map"></ion-icon>
+          </ion-item>
+        </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="center">
+  <ion-fab-button routerLink="add-events">
+    <ion-icon  name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="">
+      <ion-col size="4">
+      </ion-col>
+      <ion-col size="4" class="ion-text-center ion-margin-top ion-margin-bootm">
+        <ion-img class="img-style ion-margin-end ion-margin-start" src="../../assets/img/logo-Event.png"></ion-img>
+      </ion-col>
+      <ion-col size="4"></ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <h2><b>What's your email?</b></h2>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <ion-textarea [(ngModel)]="authen.emailSignIn" placeholder="Your email address..."></ion-textarea>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <h2><b>What's your password?</b></h2>
+      </ion-col>
+      <ion-col sizeXs="12" class="ion-text-center">
+        <ion-input [(ngModel)]="authen.passwordSignIn" type="password" placeholder="Your password..." value="password"></ion-input>
+      </ion-col>
+      
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="signIn()"><ion-icon name="sparkles-outline" class="ion-margin-end"></ion-icon>Sign In<ion-icon name="sparkles-outline" class="ion-margin-start"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col size="12" class="ion-text-center">
+        <label>{{authen.label}}</label>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <a routerLink="register-send-email">Forgot your password?</a>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <a (click)="goToRegister()" >New user?</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
